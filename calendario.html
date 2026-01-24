@@ -1,18 +1,258 @@
 <!DOCTYPE html>
-<html class="no-js no-svg" lang="it-IT">
-
+<html lang="it">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Scuola dell'infanzia Santa Maria Goretti Creola</title>
-	<meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calendario scolastico della Scuola dell'Infanzia Santa Maria Goretti: festivita, eventi e date importanti">
+    <title>Calendario - Scuola dell'Infanzia Santa Maria Goretti</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Scuola dell'infanzia Santa Maria Goretti Creola</h1>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="assets/images/logo_scuola.jpg" alt="Logo Scuola dell'Infanzia Santa Maria Goretti">
+                </div>
+                <div class="logo-text">
+                    <h1>Scuola dell'Infanzia Santa Maria Goretti</h1>
+                    <span>Creola di Saccolongo (PD)</span>
+                </div>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scuola.html">La Scuola</a></li>
+                <li><a href="proposta_educativa.html">Proposta Educativa</a></li>
+                <li><a href="ambienti.html">Ambienti</a></li>
+                <li><a href="mensa.html">Mensa</a></li>
+                <li><a href="calendario.html" class="active">Calendario</a></li>
+                <li><a href="orari.html">Orari</a></li>
+                <li><a href="tariffe.html">Tariffe</a></li>
+                <li><a href="avvisi.html">Avvisi</a></li>
+                <li><a href="moduli.html">Moduli</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <a href="index.html">Homepage</a>
+    <!-- Contenuto principale -->
+    <main>
+        <section class="page-title">
+            <h2>Calendario Scolastico</h2>
+            <p>Tutte le date importanti dell'anno scolastico 2024/2025</p>
+        </section>
+
+        <!-- Info generali -->
+        <div class="info-box">
+            <h3>Anno Scolastico 2024/2025</h3>
+            <ul>
+                <li><strong>Inizio attività:</strong> Lunedi 9 Settembre 2024</li>
+                <li><strong>Fine attività:</strong> Sabato 28 Giugno 2025</li>
+                <li><strong>Periodo inserimento nuovi iscritti:</strong> 9-20 Settembre 2024</li>
+            </ul>
+        </div>
+
+        <!-- Festivita e chiusure -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Festivita e Chiusure</h2>
+                <p>Giorni di chiusura della scuola</p>
+            </div>
+
+            <div class="calendario-mese">
+                <h3>Settembre - Dicembre 2024</h3>
+                <div class="evento">
+                    <div class="evento-data">
+                        <span class="giorno">1</span>
+                        <span class="mese-abbr">NOV</span>
+                    </div>
+                    <div>
+                        <h4>Tutti i Santi</h4>
+                        <p>Festivita nazionale - Scuola chiusa</p>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="evento-data">
+                        <span class="giorno">8</span>
+                        <span class="mese-abbr">DIC</span>
+                    </div>
+                    <div>
+                        <h4>Immacolata Concezione</h4>
+                        <p>Festivita nazionale - Scuola chiusa</p>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="evento-data">
+                        <span class="giorno">23</span>
+                        <span class="mese-abbr">DIC</span>
+                    </div>
+                    <div>
+                        <h4>Inizio vacanze di Natale</h4>
+                        <p>Chiusura fino al 6 gennaio 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendario-mese">
+                <h3>Gennaio - Aprile 2025</h3>
+                <div class="evento">
+                    <div class="evento-data">
+                        <span class="giorno">7</span>
+                        <span class="mese-abbr">GEN</span>
+                    </div>
+                    <div>
+                        <h4>Ripresa attività</h4>
+                        <p>Rientro dalle vacanze di Natale</p>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="evento-data">
+                        <span class="giorno">3-4</span>
+                        <span class="mese-abbr">MAR</span>
+                    </div>
+                    <div>
+                        <h4>Carnevale</h4>
+                        <p>Scuola chiusa lunedi e martedi grasso</p>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="evento-data">
+                        <span class="giorno">17</span>
+                        <span class="mese-abbr">APR</span>
+                    </div>
+                    <div>
+                        <h4>Inizio vacanze di Pasqua</h4>
+                        <p>Chiusura fino al 22 aprile 2025</p>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="evento-data">
+                        <span class="giorno">25</span>
+                        <span class="mese-abbr">APR</span>
+                    </div>
+                    <div>
+                        <h4>Festa della Liberazione</h4>
+                        <p>Festivita nazionale - Scuola chiusa</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendario-mese">
+                <h3>Maggio - Giugno 2025</h3>
+                <div class="evento">
+                    <div class="evento-data">
+                        <span class="giorno">1</span>
+                        <span class="mese-abbr">MAG</span>
+                    </div>
+                    <div>
+                        <h4>Festa dei Lavoratori</h4>
+                        <p>Festivita nazionale - Scuola chiusa</p>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="evento-data">
+                        <span class="giorno">2</span>
+                        <span class="mese-abbr">GIU</span>
+                    </div>
+                    <div>
+                        <h4>Festa della Repubblica</h4>
+                        <p>Festivita nazionale - Scuola chiusa</p>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="evento-data">
+                        <span class="giorno">28</span>
+                        <span class="mese-abbr">GIU</span>
+                    </div>
+                    <div>
+                        <h4>Ultimo giorno di scuola</h4>
+                        <p>Festa di fine anno con le famiglie</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventi speciali -->
+        <section class="section-colorata mt-40">
+            <h3>Eventi e Feste</h3>
+            <p>Durante l'anno scolastico organizziamo momenti speciali con i bambini e le famiglie: festa dell'accoglienza, festa dei nonni, recita di Natale, festa di Carnevale, festa di Pasqua, festa di fine anno e molto altro!</p>
+        </section>
+
+        <!-- Riunioni -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Riunioni con i Genitori</h2>
+                <p>Momenti di incontro e confronto con le famiglie</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Calendario Riunioni</h3>
+                <ul>
+                    <li><strong>Settembre:</strong> Riunione di inizio anno e presentazione progetto educativo</li>
+                    <li><strong>Novembre:</strong> Colloqui individuali con le insegnanti</li>
+                    <li><strong>Marzo:</strong> Colloqui individuali con le insegnanti</li>
+                    <li><strong>Maggio:</strong> Riunione di fine anno e verifica del percorso</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Download -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Scarica il Calendario</h2>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128197;</div>
+                    <div>
+                        <h4>Calendario Scolastico 2024/2025</h4>
+                        <p>Calendario completo in formato PDF</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Scuola dell'Infanzia Santa Maria Goretti</h4>
+                <p>Da anni al servizio delle famiglie di Creola e dintorni, offriamo un ambiente sereno e stimolante per la crescita dei vostri bambini.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Link Rapidi</h4>
+                <a href="scuola.html">La Scuola</a><br>
+                <a href="proposta_educativa.html">Proposta Educativa</a><br>
+                <a href="ambienti.html">Ambienti</a><br>
+                <a href="tariffe.html">Tariffe</a><br>
+                <a href="moduli.html">Modulistica</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Via Molini, 90<br>
+                35030 Creola di Saccolongo (PD)<br>
+                Tel: 049 801 5128<br>
+                Email: smgoretti@alice.it</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo (PD) - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('active');
+        }
+    </script>
 </body>
-
 </html>

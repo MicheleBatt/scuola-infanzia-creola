@@ -1,19 +1,226 @@
 <!DOCTYPE html>
-<html class="no-js no-svg" lang="it-IT">
-
+<html lang="it">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Scuola dell'infanzia Santa Maria Goretti Creola</title>
-	<meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scuola dell'Infanzia Santa Maria Goretti a Creola di Saccolongo (PD) - Un ambiente accogliente e stimolante per la crescita dei vostri bambini">
+    <title>Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Scuola dell'infanzia Santa Maria Goretti Creola</h1>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="assets/images/logo_scuola.jpg" alt="Logo Scuola dell'Infanzia Santa Maria Goretti">
+                </div>
+                <div class="logo-text">
+                    <h1>Scuola dell'Infanzia Santa Maria Goretti</h1>
+                    <span>Creola di Saccolongo (PD)</span>
+                </div>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="scuola.html">La Scuola</a></li>
+                <li><a href="proposta_educativa.html">Proposta Educativa</a></li>
+                <li><a href="ambienti.html">Ambienti</a></li>
+                <li><a href="mensa.html">Mensa</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="orari.html">Orari</a></li>
+                <li><a href="tariffe.html">Tariffe</a></li>
+                <li><a href="avvisi.html">Avvisi</a></li>
+                <li><a href="moduli.html">Moduli</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <a href="avvisi.html">Avvisi</a>
-    <a href="tariffe.html">Tariffe</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Benvenuti nella nostra grande famiglia!</h2>
+            <p>Un luogo dove ogni bambino cresce felice, impara giocando e scopre il mondo con gioia e meraviglia. La nostra scuola accoglie i vostri piccoli con amore e professionalita.</p>
+            <a href="scuola.html" class="btn">Scopri la nostra scuola</a>
+        </div>
+    </section>
+
+    <!-- Contenuto principale -->
+    <main>
+        <!-- Sezione di benvenuto -->
+        <section class="page-title">
+            <h2>La Nostra Missione</h2>
+            <p>Accompagnare ogni bambino nel suo percorso di crescita, valorizzando la sua unicita e stimolando la curiosita naturale attraverso il gioco, l'esplorazione e la relazione.</p>
+        </section>
+
+        <!-- Cards delle sezioni principali -->
+        <div class="cards-grid">
+            <article class="card animate-fade-in">
+                <div class="card-img placeholder-img">&#128218;</div>
+                <div class="card-content">
+                    <h3>La Nostra Scuola</h3>
+                    <p>Scopri la storia, i valori e la missione della nostra scuola dell'infanzia, da sempre punto di riferimento per le famiglie di Creola.</p>
+                    <a href="scuola.html" class="card-link">Scopri di piu &#8594;</a>
+                </div>
+            </article>
+
+            <article class="card animate-fade-in">
+                <div class="card-img placeholder-img">&#127912;</div>
+                <div class="card-content">
+                    <h3>Proposta Educativa</h3>
+                    <p>Il nostro progetto pedagogico pone il bambino al centro, favorendo lo sviluppo armonico di tutte le sue potenzialità.</p>
+                    <a href="proposta_educativa.html" class="card-link">Scopri di piu &#8594;</a>
+                </div>
+            </article>
+
+            <article class="card animate-fade-in">
+                <div class="card-img placeholder-img">&#127968;</div>
+                <div class="card-content">
+                    <h3>I Nostri Ambienti</h3>
+                    <p>Spazi colorati, sicuri e stimolanti pensati per favorire il gioco, l'apprendimento e la socializzazione dei bambini.</p>
+                    <a href="ambienti.html" class="card-link">Scopri di piu &#8594;</a>
+                </div>
+            </article>
+
+            <article class="card animate-fade-in">
+                <div class="card-img placeholder-img">&#127869;</div>
+                <div class="card-content">
+                    <h3>La Mensa</h3>
+                    <p>Un'alimentazione sana e bilanciata, con menu preparati con ingredienti freschi e di qualita per i nostri piccoli.</p>
+                    <a href="mensa.html" class="card-link">Scopri di piu &#8594;</a>
+                </div>
+            </article>
+
+            <article class="card animate-fade-in">
+                <div class="card-img placeholder-img">&#128197;</div>
+                <div class="card-content">
+                    <h3>Calendario Scolastico</h3>
+                    <p>Tutte le date importanti dell'anno scolastico: festivita, eventi speciali, riunioni e attività con le famiglie.</p>
+                    <a href="calendario.html" class="card-link">Scopri di piu &#8594;</a>
+                </div>
+            </article>
+
+            <article class="card animate-fade-in">
+                <div class="card-img placeholder-img">&#128336;</div>
+                <div class="card-content">
+                    <h3>Orari</h3>
+                    <p>Informazioni sugli orari di ingresso, uscita e sulle diverse opzioni di frequenza disponibili per le famiglie.</p>
+                    <a href="orari.html" class="card-link">Scopri di piu &#8594;</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Sezione colorata -->
+        <section class="section-colorata">
+            <h3>Iscrizioni Aperte!</h3>
+            <p>Vuoi far parte della nostra famiglia? Le iscrizioni per il prossimo anno scolastico sono aperte. Vieni a trovarci per conoscere la nostra realta!</p>
+            <a href="moduli.html" class="btn" style="margin-top: 20px;">Scarica i moduli</a>
+        </section>
+
+        <!-- Ultimi avvisi -->
+        <section>
+            <div class="page-title">
+                <h2>Ultimi Avvisi</h2>
+                <p>Resta aggiornato sulle ultime comunicazioni della scuola</p>
+            </div>
+
+            <div class="avviso avviso-importante">
+                <span class="avviso-data">15 Gennaio 2025</span>
+                <h3>Riunione genitori</h3>
+                <p>Si comunica che giovedi 20 gennaio alle ore 18:00 si terra la riunione con i genitori per discutere delle attività del secondo quadrimestre.</p>
+            </div>
+
+            <div class="avviso">
+                <span class="avviso-data">10 Gennaio 2025</span>
+                <h3>Festa di Carnevale</h3>
+                <p>Venerdi 14 febbraio festeggeremo il Carnevale a scuola! I bambini potranno venire mascherati. Maggiori dettagli a breve.</p>
+            </div>
+
+            <div class="text-center mt-30">
+                <a href="avvisi.html" class="btn btn-secondario">Tutti gli avvisi</a>
+            </div>
+        </section>
+
+        <!-- Contatti rapidi -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Contattaci</h2>
+                <p>Siamo sempre disponibili per informazioni e chiarimenti</p>
+            </div>
+
+            <div class="contatti-grid">
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128205;</div>
+                    <div>
+                        <h4>Indirizzo</h4>
+                        <p>Via Molini, 90<br>35030 Creola di Saccolongo (PD)</p>
+                    </div>
+                </div>
+
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128222;</div>
+                    <div>
+                        <h4>Telefono</h4>
+                        <p>049 801 5128</p>
+                    </div>
+                </div>
+
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128231;</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>smgoretti@alice.it</p>
+                    </div>
+                </div>
+
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128337;</div>
+                    <div>
+                        <h4>Orari Segreteria</h4>
+                        <p>Lun-Ven: 8:00 - 16:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Scuola dell'Infanzia Santa Maria Goretti</h4>
+                <p>Da anni al servizio delle famiglie di Creola e dintorni, offriamo un ambiente sereno e stimolante per la crescita dei vostri bambini.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Link Rapidi</h4>
+                <a href="scuola.html">La Scuola</a><br>
+                <a href="proposta_educativa.html">Proposta Educativa</a><br>
+                <a href="ambienti.html">Ambienti</a><br>
+                <a href="tariffe.html">Tariffe</a><br>
+                <a href="moduli.html">Modulistica</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Via Molini, 90<br>
+                35030 Creola di Saccolongo (PD)<br>
+                Tel: 049 801 5128<br>
+                Email: smgoretti@alice.it</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo (PD) - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('active');
+        }
+    </script>
 </body>
-
 </html>

@@ -1,18 +1,261 @@
 <!DOCTYPE html>
-<html class="no-js no-svg" lang="it-IT">
-
+<html lang="it">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Scuola dell'infanzia Santa Maria Goretti Creola</title>
-	<meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scopri gli ambienti della Scuola dell'Infanzia Santa Maria Goretti: spazi colorati, sicuri e stimolanti per i bambini">
+    <title>Ambienti - Scuola dell'Infanzia Santa Maria Goretti</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Scuola dell'infanzia Santa Maria Goretti Creola</h1>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="assets/images/logo_scuola.jpg" alt="Logo Scuola dell'Infanzia Santa Maria Goretti">
+                </div>
+                <div class="logo-text">
+                    <h1>Scuola dell'Infanzia Santa Maria Goretti</h1>
+                    <span>Creola di Saccolongo (PD)</span>
+                </div>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scuola.html">La Scuola</a></li>
+                <li><a href="proposta_educativa.html">Proposta Educativa</a></li>
+                <li><a href="ambienti.html" class="active">Ambienti</a></li>
+                <li><a href="mensa.html">Mensa</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="orari.html">Orari</a></li>
+                <li><a href="tariffe.html">Tariffe</a></li>
+                <li><a href="avvisi.html">Avvisi</a></li>
+                <li><a href="moduli.html">Moduli</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <a href="index.html">Homepage</a>
+    <!-- Contenuto principale -->
+    <main>
+        <section class="page-title">
+            <h2>I Nostri Ambienti</h2>
+            <p>Spazi pensati per accogliere, stimolare e far crescere i bambini in sicurezza</p>
+        </section>
+
+        <!-- Introduzione -->
+        <div class="info-box">
+            <h3>Spazi a Misura di Bambino</h3>
+            <p>I nostri ambienti sono stati progettati e allestiti pensando alle esigenze dei bambini: sicurezza, comfort, stimolazione sensoriale e possibilità di esplorazione. Ogni spazio è curato nei minimi dettagli per favorire il gioco, l'apprendimento e la socializzazione.</p>
+            <p class="mt-20">Colori vivaci, arredi ergonomici e materiali didattici di qualità caratterizzano tutti gli ambienti della nostra scuola.</p>
+        </div>
+
+        <!-- Gallery degli ambienti -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Galleria Fotografica</h2>
+                <p>Scopri i nostri spazi attraverso le immagini</p>
+            </div>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="width: 100%; height: 100%;">&#127968;</div>
+                    <div class="gallery-item-overlay">
+                        <h3>Ingresso e Accoglienza</h3>
+                        <p>Spazio dedicato all'arrivo dei bambini</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="width: 100%; height: 100%;">&#128218;</div>
+                    <div class="gallery-item-overlay">
+                        <h3>Sezione Piccoli</h3>
+                        <p>Aula per i bambini di 3 anni</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="width: 100%; height: 100%;">&#127912;</div>
+                    <div class="gallery-item-overlay">
+                        <h3>Sezione Medi</h3>
+                        <p>Aula per i bambini di 4 anni</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="width: 100%; height: 100%;">&#128221;</div>
+                    <div class="gallery-item-overlay">
+                        <h3>Sezione Grandi</h3>
+                        <p>Aula per i bambini di 5 anni</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="width: 100%; height: 100%;">&#127869;</div>
+                    <div class="gallery-item-overlay">
+                        <h3>Sala Mensa</h3>
+                        <p>Spazio dedicato ai pasti</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="width: 100%; height: 100%;">&#128164;</div>
+                    <div class="gallery-item-overlay">
+                        <h3>Sala Riposo</h3>
+                        <p>Area per il riposino pomeridiano</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="width: 100%; height: 100%;">&#127939;</div>
+                    <div class="gallery-item-overlay">
+                        <h3>Salone Polivalente</h3>
+                        <p>Spazio per attività motorie e feste</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="width: 100%; height: 100%;">&#127795;</div>
+                    <div class="gallery-item-overlay">
+                        <h3>Giardino Esterno</h3>
+                        <p>Area verde con giochi all'aperto</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Descrizione dettagliata -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Descrizione degli Spazi</h2>
+            </div>
+
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #FFE66D, #FF9F43);">&#128682;</div>
+                    <div class="card-content">
+                        <h3>Ingresso e Spogliatoio</h3>
+                        <p>L'ingresso accoglie bambini e genitori in un ambiente caldo e familiare. Lo spogliatoio, dotato di armadietti personalizzati, permette ai bambini di riporre i propri effetti personali.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #4ECDC4, #74C0FC);">&#128218;</div>
+                    <div class="card-content">
+                        <h3>Le Sezioni</h3>
+                        <p>Le aule sono organizzate in angoli tematici: angolo morbido, angolo della lettura, angolo del gioco simbolico, angolo delle costruzioni. Arredi colorati e a misura di bambino.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #A06CD5, #FF85A1);">&#127939;</div>
+                    <div class="card-content">
+                        <h3>Salone Polivalente</h3>
+                        <p>Ampio spazio utilizzato per attività motorie, psicomotricita, feste e momenti di gioco collettivo. Dotato di materassini, cerchi, palloni e attrezzature per il movimento.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #7ED957, #4ECDC4);">&#127869;</div>
+                    <div class="card-content">
+                        <h3>Sala Mensa</h3>
+                        <p>Ambiente luminoso e accogliente dove i bambini consumano i pasti. Tavoli e sedie ergonomiche, stoviglie colorate e un'atmosfera serena per il momento del pranzo.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #74C0FC, #A06CD5);">&#128164;</div>
+                    <div class="card-content">
+                        <h3>Sala Riposo</h3>
+                        <p>Spazio dedicato al riposino pomeridiano dei piu piccoli, con brandine confortevoli, luci soffuse e un'atmosfera rilassante che favorisce il sonno.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #FF6B6B, #FFE66D);">&#128701;</div>
+                    <div class="card-content">
+                        <h3>Servizi Igienici</h3>
+                        <p>Bagni a misura di bambino, con sanitari adatti alle diverse eta, spazi per il cambio e tutto il necessario per l'igiene personale in autonomia.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Spazio esterno -->
+        <section class="section-colorata mt-40">
+            <h3>Il Nostro Giardino</h3>
+            <p>Un grande spazio verde attrezzato con giochi sicuri: scivoli, altalene, casette, sabbionaia e tanto spazio per correre e giocare all'aria aperta. L'orto didattico permette ai bambini di scoprire la natura e il ciclo delle piante.</p>
+        </section>
+
+        <!-- Sicurezza -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Sicurezza e Accessibilità</h2>
+                <p>La sicurezza dei bambini è la nostra priorita assoluta</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Misure di Sicurezza</h3>
+                <ul>
+                    <li>Cancelli e porte con chiusura di sicurezza</li>
+                    <li>Spigoli arrotondati e protezioni su tutti gli arredi</li>
+                    <li>Pavimenti antiscivolo e antitrauma</li>
+                    <li>Impianto di videosorveglianza</li>
+                    <li>Sistema antincendio a norma di legge</li>
+                    <li>Piano di evacuazione e prove periodiche</li>
+                    <li>Giochi esterni certificati e controllati regolarmente</li>
+                    <li>Accesso riservato solo a personale autorizzato</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Accessibilità</h3>
+                <ul>
+                    <li>Struttura accessibile ai disabili</li>
+                    <li>Rampe e percorsi privi di barriere architettoniche</li>
+                    <li>Servizi igienici attrezzati</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Scuola dell'Infanzia Santa Maria Goretti</h4>
+                <p>Da anni al servizio delle famiglie di Creola e dintorni, offriamo un ambiente sereno e stimolante per la crescita dei vostri bambini.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Link Rapidi</h4>
+                <a href="scuola.html">La Scuola</a><br>
+                <a href="proposta_educativa.html">Proposta Educativa</a><br>
+                <a href="ambienti.html">Ambienti</a><br>
+                <a href="tariffe.html">Tariffe</a><br>
+                <a href="moduli.html">Modulistica</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Via Molini, 90<br>
+                35030 Creola di Saccolongo (PD)<br>
+                Tel: 049 801 5128<br>
+                Email: smgoretti@alice.it</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo (PD) - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('active');
+        }
+    </script>
 </body>
-
 </html>

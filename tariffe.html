@@ -1,18 +1,251 @@
 <!DOCTYPE html>
-<html class="no-js no-svg" lang="it-IT">
-
+<html lang="it">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Scuola dell'infanzia Santa Maria Goretti Creola</title>
-	<meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tariffe e costi della Scuola dell'Infanzia Santa Maria Goretti: rette, servizi aggiuntivi e modalita di pagamento">
+    <title>Tariffe - Scuola dell'Infanzia Santa Maria Goretti</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Scuola dell'infanzia Santa Maria Goretti Creola</h1>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="assets/images/logo_scuola.jpg" alt="Logo Scuola dell'Infanzia Santa Maria Goretti">
+                </div>
+                <div class="logo-text">
+                    <h1>Scuola dell'Infanzia Santa Maria Goretti</h1>
+                    <span>Creola di Saccolongo (PD)</span>
+                </div>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scuola.html">La Scuola</a></li>
+                <li><a href="proposta_educativa.html">Proposta Educativa</a></li>
+                <li><a href="ambienti.html">Ambienti</a></li>
+                <li><a href="mensa.html">Mensa</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="orari.html">Orari</a></li>
+                <li><a href="tariffe.html" class="active">Tariffe</a></li>
+                <li><a href="avvisi.html">Avvisi</a></li>
+                <li><a href="moduli.html">Moduli</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <a href="index.html">Homepage</a>
+    <!-- Contenuto principale -->
+    <main>
+        <section class="page-title">
+            <h2>Tariffe e Costi</h2>
+            <p>Tutte le informazioni su rette, servizi e modalità di pagamento</p>
+        </section>
+
+        <!-- Intro -->
+        <div class="info-box">
+            <h3>Informazioni Generali</h3>
+            <p>La Scuola dell'Infanzia Santa Maria Goretti è una scuola paritaria. Le tariffe indicate sono relative all'anno scolastico in corso e potrebbero subire variazioni. Per informazioni aggiornate, contattare la segreteria.</p>
+        </div>
+
+        <!-- Tabella rette -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Rette Scolastiche</h2>
+                <p>Anno scolastico 2024/2025</p>
+            </div>
+
+            <table class="tabella">
+                <thead>
+                    <tr>
+                        <th>Tipologia</th>
+                        <th>Descrizione</th>
+                        <th>Importo Mensile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Retta Base per i residenti nel comune di Saccolongo</strong></td>
+                        <td>Frequenza tempo normale (8:00-16:00) comprensiva di mensa</td>
+                        <td>€ XXX,00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Retta Base per i NON residenti nel comune di Saccolongo</strong></td>
+                        <td>Frequenza tempo normale (8:00-16:00) comprensiva di mensa</td>
+                        <td>€ 200,00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Retta per i bimbi che hanno almeno un fratello/sorella a scuola</strong></td>
+                        <td>Frequenza tempo normale (8:00-16:00) comprensiva di mensa</td>
+                        <td>€ 190,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Servizi aggiuntivi -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Servizi Aggiuntivi</h2>
+            </div>
+
+            <table class="tabella">
+                <thead>
+                    <tr>
+                        <th>Servizio</th>
+                        <th>Orario</th>
+                        <th>Costo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pre-scuola</strong></td>
+                        <td>7:30 - 8:00</td>
+                        <td>€ XX,00/mese</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Quote una tantum -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Quote Una Tantum</h2>
+            </div>
+
+            <div class="info-box">
+                <h3>All'Iscrizione</h3>
+                <ul>
+                    <li><strong>Quota di iscrizione:</strong> € 80,00 (annuale, non rimborsabile)</li>
+                    <li><strong>Materiale didattico:</strong> € XX,00 (annuale)</li>
+                    <li><strong>Assicurazione:</strong> € XX,00 (annuale)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Agevolazioni -->
+        <section class="section-colorata mt-40">
+            <h3>Agevolazioni</h3>
+            <p>Sono previste riduzioni per il secondo figlio iscritto e successive. Per famiglie in difficoltà economica è possibile richiedere un colloquio con la direzione per valutare eventuali agevolazioni. Contattare la segreteria per maggiori informazioni.</p>
+        </section>
+
+        <!-- Modalita di pagamento -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Modalita di Pagamento</h2>
+            </div>
+
+            <div class="info-box">
+                <h3>Come Pagare</h3>
+                <ul>
+                    <li><strong>Bonifico bancario:</strong> IBAN IT00 X000 0000 0000 0000 0000 000</li>
+                    <li><strong>Bollettino postale:</strong> C/C n. 801 5128XXX</li>
+                    <li><strong>RID/Addebito diretto:</strong> su richiesta presso la segreteria</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Scadenze</h3>
+                <ul>
+                    <li>La retta mensile deve essere pagata entro il giorno 5 di ogni mese</li>
+                    <li>La quota di iscrizione va versata al momento dell'iscrizione</li>
+                    <li>La quota materiale didattico va versata entro settembre</li>
+                    <li>In caso di ritardo nel pagamento, contattare la segreteria</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Detrazioni fiscali -->
+        <section class="mt-40">
+            <div class="info-box">
+                <h3>Detrazioni Fiscali</h3>
+                <ul>
+                    <li>Le rette scolastiche sono detraibili ai fini IRPEF nella misura del 19%</li>
+                    <li>Il limite massimo detraibile è stabilito annualmente dalla normativa vigente</li>
+                    <li>La scuola rilascia attestazione dei pagamenti effettuati per la dichiarazione dei redditi</li>
+                    <li>Per ulteriori informazioni, consultare il proprio commercialista o CAF</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Note -->
+        <section class="mt-40">
+            <div class="info-box">
+                <h3>Note Importanti</h3>
+                <ul>
+                    <li>Le tariffe indicate sono riferite all'anno scolastico 2024/2025</li>
+                    <li>La retta è dovuta per 10 mensilita (settembre-giugno)</li>
+                    <li>In caso di assenza del bambino, la retta resta comunque dovuta per intero</li>
+                    <li>Il ritiro anticipato del bambino non da diritto a rimborsi</li>
+                    <li>Per variazioni di orario o servizi, comunicare con almeno 15 giorni di anticipo</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contatti -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Per Informazioni</h2>
+            </div>
+
+            <div class="contatti-grid">
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128222;</div>
+                    <div>
+                        <h4>Telefono</h4>
+                        <p>049 801 5128</p>
+                    </div>
+                </div>
+
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128231;</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>smgoretti@alice.it</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Scuola dell'Infanzia Santa Maria Goretti</h4>
+                <p>Da anni al servizio delle famiglie di Creola e dintorni, offriamo un ambiente sereno e stimolante per la crescita dei vostri bambini.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Link Rapidi</h4>
+                <a href="scuola.html">La Scuola</a><br>
+                <a href="proposta_educativa.html">Proposta Educativa</a><br>
+                <a href="ambienti.html">Ambienti</a><br>
+                <a href="tariffe.html">Tariffe</a><br>
+                <a href="moduli.html">Modulistica</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Via Molini, 90<br>
+                35030 Creola di Saccolongo (PD)<br>
+                Tel: 049 801 5128<br>
+                Email: smgoretti@alice.it</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo (PD) - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('active');
+        }
+    </script>
 </body>
-
 </html>

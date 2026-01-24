@@ -1,18 +1,243 @@
 <!DOCTYPE html>
-<html class="no-js no-svg" lang="it-IT">
-
+<html lang="it">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Scuola dell'infanzia Santa Maria Goretti Creola</title>
-	<meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Il servizio mensa della Scuola dell'Infanzia Santa Maria Goretti: alimentazione sana e bilanciata per i bambini">
+    <title>Mensa - Scuola dell'Infanzia Santa Maria Goretti</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Scuola dell'infanzia Santa Maria Goretti Creola</h1>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="assets/images/logo_scuola.jpg" alt="Logo Scuola dell'Infanzia Santa Maria Goretti">
+                </div>
+                <div class="logo-text">
+                    <h1>Scuola dell'Infanzia Santa Maria Goretti</h1>
+                    <span>Creola di Saccolongo (PD)</span>
+                </div>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scuola.html">La Scuola</a></li>
+                <li><a href="proposta_educativa.html">Proposta Educativa</a></li>
+                <li><a href="ambienti.html">Ambienti</a></li>
+                <li><a href="mensa.html" class="active">Mensa</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="orari.html">Orari</a></li>
+                <li><a href="tariffe.html">Tariffe</a></li>
+                <li><a href="avvisi.html">Avvisi</a></li>
+                <li><a href="moduli.html">Moduli</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <a href="index.html">Homepage</a>
+    <!-- Contenuto principale -->
+    <main>
+        <section class="page-title">
+            <h2>Il Servizio Mensa</h2>
+            <p>Alimentazione sana, bilanciata e gustosa per i nostri bambini</p>
+        </section>
+
+        <!-- Introduzione -->
+        <div class="info-box">
+            <h3>La Nostra Cucina</h3>
+            <p>La mensa della nostra scuola offre ogni giorno pasti preparati con ingredienti freschi e di qualità. Il menu è studiato da esperti nutrizionisti per garantire un'alimentazione equilibrata e adatta all'età dei bambini.</p>
+            <p class="mt-20">Crediamo che il momento del pasto sia anche un'occasione educativa: i bambini imparano a stare a tavola, a provare nuovi sapori e a condividere il cibo con i compagni.</p>
+        </div>
+
+        <!-- Caratteristiche -->
+        <section class="mt-40">
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #7ED957, #4ECDC4);">&#129382;</div>
+                    <div class="card-content">
+                        <h3>Ingredienti Freschi</h3>
+                        <p>Utilizziamo solo ingredienti freschi e di stagione, privilegiando prodotti locali e a km zero per garantire qualità e genuinita.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #FF9F43, #FFE66D);">&#127858;</div>
+                    <div class="card-content">
+                        <h3>Cucina Interna</h3>
+                        <p>I pasti vengono preparati ogni giorno nella cucina della scuola dalla nostra cuoca, per garantire freschezza e controllo della qualita.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #FF6B6B, #FF85A1);">&#129367;</div>
+                    <div class="card-content">
+                        <h3>Menu Bilanciato</h3>
+                        <p>Il menu settimanale e elaborato seguendo le linee guida nutrizionali per l'infanzia, con varieta di cibi e corretta distribuzione dei nutrienti.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Menu tipo -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Menu Settimanale Tipo</h2>
+                <p>Un esempio del nostro menu (il menu effettivo viene comunicato mensilmente)</p>
+            </div>
+
+            <table class="tabella">
+                <thead>
+                    <tr>
+                        <th>Giorno</th>
+                        <th>Primo</th>
+                        <th>Secondo</th>
+                        <th>Contorno</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Lunedi</strong></td>
+                        <td>Pasta al pomodoro</td>
+                        <td>Petto di pollo</td>
+                        <td>Carote</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Martedi</strong></td>
+                        <td>Risotto alla zucca</td>
+                        <td>Merluzzo al forno</td>
+                        <td>Patate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mercoledi</strong></td>
+                        <td>Pasta e fagioli</td>
+                        <td>Frittata</td>
+                        <td>Insalata</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Giovedi</strong></td>
+                        <td>Gnocchi al ragu</td>
+                        <td>Formaggio fresco</td>
+                        <td>Piselli</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Venerdi</strong></td>
+                        <td>Minestrina</td>
+                        <td>Bastoncini di pesce</td>
+                        <td>Verdure grigliate</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="text-center mt-20"><em>Il pasto include sempre: pane, frutta fresca e acqua</em></p>
+        </section>
+
+        <!-- Diete speciali -->
+        <section class="section-colorata mt-40">
+            <h3>Diete Speciali e Allergie</h3>
+            <p>La nostra cucina è attrezzata per preparare pasti personalizzati per bambini con allergie, intolleranze alimentari o esigenze dietetiche particolari. E' sufficiente presentare la certificazione medica scritta.</p>
+        </section>
+
+        <!-- Info aggiuntive -->
+        <section class="mt-40">
+            <div class="info-box">
+                <h3>Merende</h3>
+                <ul>
+                    <li>Merenda di metà mattina: frutta fresca di stagione</li>
+                    <li>Merenda pomeridiana: yogurt, crackers, biscotti o frutta</li>
+                    <li>Le merende sono incluse nel servizio mensa</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Igiene e Sicurezza Alimentare</h3>
+                <ul>
+                    <li>La cucina rispetta tutte le normative HACCP</li>
+                    <li>Controlli periodici da parte dell'ASL</li>
+                    <li>Personale formato sulla sicurezza alimentare</li>
+                    <li>Tracciabilità completa degli ingredienti</li>
+                    <li>Conservazione e preparazione secondo le norme vigenti</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Educazione Alimentare</h3>
+                <ul>
+                    <li>Progetti di educazione al gusto e alla sana alimentazione</li>
+                    <li>Laboratori di cucina con i bambini</li>
+                    <li>Attività legate all'orto didattico</li>
+                    <li>Coinvolgimento delle famiglie su temi nutrizionali</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Download menu -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Scarica il Menu</h2>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128196;</div>
+                    <div>
+                        <h4>Menu Mensile</h4>
+                        <p>Il menu completo del mese in corso</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128196;</div>
+                    <div>
+                        <h4>Tabella Allergeni</h4>
+                        <p>Elenco degli allergeni presenti nei pasti</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Scuola dell'Infanzia Santa Maria Goretti</h4>
+                <p>Da anni al servizio delle famiglie di Creola e dintorni, offriamo un ambiente sereno e stimolante per la crescita dei vostri bambini.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Link Rapidi</h4>
+                <a href="scuola.html">La Scuola</a><br>
+                <a href="proposta_educativa.html">Proposta Educativa</a><br>
+                <a href="ambienti.html">Ambienti</a><br>
+                <a href="tariffe.html">Tariffe</a><br>
+                <a href="moduli.html">Modulistica</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Via Molini, 90<br>
+                35030 Creola di Saccolongo (PD)<br>
+                Tel: 049 801 5128<br>
+                Email: smgoretti@alice.it</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo (PD) - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('active');
+        }
+    </script>
 </body>
-
 </html>

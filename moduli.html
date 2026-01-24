@@ -1,18 +1,301 @@
 <!DOCTYPE html>
-<html class="no-js no-svg" lang="it-IT">
-
+<html lang="it">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Scuola dell'infanzia Santa Maria Goretti Creola</title>
-	<meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modulistica della Scuola dell'Infanzia Santa Maria Goretti: moduli di iscrizione, deleghe e documenti scaricabili">
+    <title>Moduli - Scuola dell'Infanzia Santa Maria Goretti</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Scuola dell'infanzia Santa Maria Goretti Creola</h1>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="assets/images/logo_scuola.jpg" alt="Logo Scuola dell'Infanzia Santa Maria Goretti">
+                </div>
+                <div class="logo-text">
+                    <h1>Scuola dell'Infanzia Santa Maria Goretti</h1>
+                    <span>Creola di Saccolongo (PD)</span>
+                </div>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scuola.html">La Scuola</a></li>
+                <li><a href="proposta_educativa.html">Proposta Educativa</a></li>
+                <li><a href="ambienti.html">Ambienti</a></li>
+                <li><a href="mensa.html">Mensa</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="orari.html">Orari</a></li>
+                <li><a href="tariffe.html">Tariffe</a></li>
+                <li><a href="avvisi.html">Avvisi</a></li>
+                <li><a href="moduli.html" class="active">Moduli</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <a href="index.html">Homepage</a>
+    <!-- Contenuto principale -->
+    <main>
+        <section class="page-title">
+            <h2>Modulistica</h2>
+            <p>Tutti i moduli e i documenti necessari per l'iscrizione e la frequenza</p>
+        </section>
+
+        <!-- Intro -->
+        <div class="info-box">
+            <h3>Come Utilizzare i Moduli</h3>
+            <p>In questa sezione potete scaricare tutti i moduli necessari per l'iscrizione e la gestione della frequenza scolastica. I moduli possono essere compilati a mano o al computer e devono essere consegnati in segreteria.</p>
+            <p class="mt-20">Per qualsiasi dubbio sulla compilazione, non esitate a contattare la segreteria.</p>
+        </div>
+
+        <!-- Moduli iscrizione -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Iscrizione</h2>
+                <p>Moduli per la nuova iscrizione</p>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128196;</div>
+                    <div>
+                        <h4>Domanda di Iscrizione</h4>
+                        <p>Modulo principale per l'iscrizione alla scuola dell'infanzia</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128196;</div>
+                    <div>
+                        <h4>Scheda Anagrafica</h4>
+                        <p>Dati anagrafici del bambino e della famiglia</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128196;</div>
+                    <div>
+                        <h4>Informativa Privacy</h4>
+                        <p>Consenso al trattamento dei dati personali (GDPR)</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128196;</div>
+                    <div>
+                        <h4>Patto di Corresponsabilita</h4>
+                        <p>Accordo scuola-famiglia sugli impegni reciproci</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+        </section>
+
+        <!-- Moduli sanitari -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Documentazione Sanitaria</h2>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128137;</div>
+                    <div>
+                        <h4>Scheda Sanitaria</h4>
+                        <p>Informazioni su allergie, intolleranze e problemi di salute</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128137;</div>
+                    <div>
+                        <h4>Richiesta Dieta Speciale</h4>
+                        <p>Per allergie, intolleranze o esigenze alimentari particolari</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128137;</div>
+                    <div>
+                        <h4>Autorizzazione Somministrazione Farmaci</h4>
+                        <p>Per farmaci salvavita o terapie croniche</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+        </section>
+
+        <!-- Moduli autorizzazioni -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Autorizzazioni</h2>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128100;</div>
+                    <div>
+                        <h4>Delega Ritiro Bambino</h4>
+                        <p>Autorizzazione per persone diverse dai genitori</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128247;</div>
+                    <div>
+                        <h4>Autorizzazione Foto e Video</h4>
+                        <p>Consenso all'utilizzo di immagini per attività scolastiche</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128652;</div>
+                    <div>
+                        <h4>Autorizzazione Uscite Didattiche</h4>
+                        <p>Consenso generale per le uscite sul territorio</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+        </section>
+
+        <!-- Moduli servizi -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Richiesta Servizi</h2>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128336;</div>
+                    <div>
+                        <h4>Richiesta Pre-scuola</h4>
+                        <p>Iscrizione al servizio di anticipo orario (7:30-8:00)</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+        </section>
+
+        <!-- Altri moduli -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Altri Moduli</h2>
+            </div>
+
+            <div class="modulo-download">
+                <div class="modulo-info">
+                    <div class="modulo-icon">&#128196;</div>
+                    <div>
+                        <h4>Richiesta Certificati</h4>
+                        <p>Per richiedere certificati di frequenza o iscrizione</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download">Scarica PDF</a>
+            </div>
+        </section>
+
+        <!-- Info consegna -->
+        <section class="section-colorata mt-40">
+            <h3>Consegna Moduli</h3>
+            <p>I moduli compilati possono essere consegnati presso la segreteria della scuola negli orari di apertura (Lun-Ven 8:30-12:30) oppure inviati via email all'indirizzo smgoretti@alice.it</p>
+        </section>
+
+        <!-- Contatti -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Assistenza</h2>
+                <p>Per aiuto nella compilazione dei moduli</p>
+            </div>
+
+            <div class="contatti-grid">
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128222;</div>
+                    <div>
+                        <h4>Telefono</h4>
+                        <p>049 801 5128</p>
+                    </div>
+                </div>
+
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128231;</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>smgoretti@alice.it</p>
+                    </div>
+                </div>
+
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128337;</div>
+                    <div>
+                        <h4>Orari Segreteria</h4>
+                        <p>Lun-Ven: 8:30 - 12:30</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Scuola dell'Infanzia Santa Maria Goretti</h4>
+                <p>Da anni al servizio delle famiglie di Creola e dintorni, offriamo un ambiente sereno e stimolante per la crescita dei vostri bambini.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Link Rapidi</h4>
+                <a href="scuola.html">La Scuola</a><br>
+                <a href="proposta_educativa.html">Proposta Educativa</a><br>
+                <a href="ambienti.html">Ambienti</a><br>
+                <a href="tariffe.html">Tariffe</a><br>
+                <a href="moduli.html">Modulistica</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Via Molini, 90<br>
+                35030 Creola di Saccolongo (PD)<br>
+                Tel: 049 801 5128<br>
+                Email: smgoretti@alice.it</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo (PD) - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('active');
+        }
+    </script>
 </body>
-
 </html>

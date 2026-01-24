@@ -1,18 +1,211 @@
 <!DOCTYPE html>
-<html class="no-js no-svg" lang="it-IT">
-
+<html lang="it">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Scuola dell'infanzia Santa Maria Goretti Creola</title>
-	<meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scopri la storia, i valori e la missione della Scuola dell'Infanzia Santa Maria Goretti di Creola">
+    <title>La Scuola - Scuola dell'Infanzia Santa Maria Goretti</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Scuola dell'infanzia Santa Maria Goretti Creola</h1>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="assets/images/logo_scuola.jpg" alt="Logo Scuola dell'Infanzia Santa Maria Goretti">
+                </div>
+                <div class="logo-text">
+                    <h1>Scuola dell'Infanzia Santa Maria Goretti</h1>
+                    <span>Creola di Saccolongo (PD)</span>
+                </div>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scuola.html" class="active">La Scuola</a></li>
+                <li><a href="proposta_educativa.html">Proposta Educativa</a></li>
+                <li><a href="ambienti.html">Ambienti</a></li>
+                <li><a href="mensa.html">Mensa</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="orari.html">Orari</a></li>
+                <li><a href="tariffe.html">Tariffe</a></li>
+                <li><a href="avvisi.html">Avvisi</a></li>
+                <li><a href="moduli.html">Moduli</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <a href="index.html">Homepage</a>
+    <!-- Contenuto principale -->
+    <main>
+        <section class="page-title">
+            <h2>La Nostra Scuola</h2>
+            <p>Una tradizione di accoglienza e cura per i piu piccoli nel cuore di Creola</p>
+        </section>
+
+        <!-- Storia della scuola -->
+        <div class="info-box">
+            <h3>La Nostra Storia</h3>
+            <p>La Scuola dell'Infanzia Santa Maria Goretti è da decenni un punto di riferimento per le famiglie di Creola e delle zone limitrofe. Fondata con l'intento di offrire ai bambini un ambiente sereno e stimolante, la nostra scuola ha accompagnato generazioni di piccoli nel loro primo percorso educativo.</p>
+            <p class="mt-20">Nel corso degli anni, abbiamo costantemente aggiornato i nostri spazi e le nostre metodologie didattiche, mantenendo però sempre al centro i valori fondanti: accoglienza, rispetto, gioia di apprendere e attenzione alla crescita armonica di ogni bambino.</p>
+        </div>
+
+        <!-- Cards con valori -->
+        <div class="cards-grid mt-30">
+            <article class="card">
+                <div class="card-img placeholder-img">&#128150;</div>
+                <div class="card-content">
+                    <h3>Accoglienza</h3>
+                    <p>Ogni bambino è accolto come un dono prezioso. Creiamo un ambiente familiare dove ognuno si sente amato, rispettato e valorizzato nella sua unicità.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img placeholder-img">&#127793;</div>
+                <div class="card-content">
+                    <h3>Crescita</h3>
+                    <p>Accompagniamo i bambini nel loro sviluppo fisico, emotivo e cognitivo, rispettando i tempi individuali e stimolando la curiosita naturale.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img placeholder-img">&#129309;</div>
+                <div class="card-content">
+                    <h3>Comunità</h3>
+                    <p>La scuola è una comunita educante dove bambini, famiglie e personale collaborano insieme per il benessere dei piu piccoli.</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Missione -->
+        <section class="section-colorata mt-40">
+            <h3>La Nostra Missione</h3>
+            <p>Offrire a ogni bambino un percorso educativo personalizzato che ne valorizzi le potenzialità, in un ambiente sicuro, gioioso e stimolante, dove il gioco diventa strumento privilegiato di apprendimento e crescita.</p>
+        </section>
+
+        <!-- Staff -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Il Nostro Staff</h2>
+                <p>Professionisti qualificati e appassionati al servizio dei vostri bambini</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Personale Educativo</h3>
+                <ul>
+                    <li>Insegnanti qualificate con esperienza pluriennale nella scuola dell'infanzia</li>
+                    <li>Formazione continua e aggiornamento professionale</li>
+                    <li>Rapporto privilegiato insegnante-bambino per garantire attenzione individualizzata</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Personale Ausiliario</h3>
+                <ul>
+                    <li>Mensa interna per la preparazione dei pasti freschi ogni giorno</li>
+                    <li>Personale addetto alle pulizie e alla sanificazione degli ambienti</li>
+                    <li>Segreteria disponibile per informazioni e supporto alle famiglie</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Collaborazioni -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Collaborazioni</h2>
+                <p>Lavoriamo in rete per offrire il meglio ai nostri bambini</p>
+            </div>
+
+            <div class="info-box">
+                <h3>I Nostri Partner</h3>
+                <ul>
+                    <li>Parrocchia di Creola per attività e iniziative comunitarie</li>
+                    <li>Comune di Saccolongo per servizi e progetti sul territorio</li>
+                    <li>Associazioni del territorio per attività ludico-ricreative</li>
+                    <li>Scuole primarie locali per progetti di continuità educativa</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contatti -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Dove Siamo</h2>
+            </div>
+
+            <div class="contatti-grid">
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128205;</div>
+                    <div>
+                        <h4>Indirizzo</h4>
+                        <p>Via Molini, 90<br>35030 Creola di Saccolongo (PD)</p>
+                    </div>
+                </div>
+
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128222;</div>
+                    <div>
+                        <h4>Telefono</h4>
+                        <p>049 801 5128</p>
+                    </div>
+                </div>
+
+                <div class="contatto-item">
+                    <div class="contatto-icon">&#128231;</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>smgoretti@alice.it</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mappa Google Maps -->
+            <div class="info-box mt-30 text-center">
+                <div style="border-radius: 12px; overflow: hidden;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.8432875467474!2d11.738311376825473!3d45.41249963688596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477f2703031e504f%3A0x4450a275054c17ba!2sScuola%20materna%20Santa%20Maria%20Goretti-Creola!5e0!3m2!1sit!2sit!4v1769269169276!5m2!1sit!2sit" width="100%" height="350" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p class="mt-20">La scuola si trova nel centro della frazione di Creola, facilmente raggiungibile e con ampia possibilità di parcheggio nelle vicinanze.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Scuola dell'Infanzia Santa Maria Goretti</h4>
+                <p>Da anni al servizio delle famiglie di Creola e dintorni, offriamo un ambiente sereno e stimolante per la crescita dei vostri bambini.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Link Rapidi</h4>
+                <a href="scuola.html">La Scuola</a><br>
+                <a href="proposta_educativa.html">Proposta Educativa</a><br>
+                <a href="ambienti.html">Ambienti</a><br>
+                <a href="tariffe.html">Tariffe</a><br>
+                <a href="moduli.html">Modulistica</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Via Molini, 90<br>
+                35030 Creola di Saccolongo (PD)<br>
+                Tel: 049 801 5128<br>
+                Email: smgoretti@alice.it</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo (PD) - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('active');
+        }
+    </script>
 </body>
-
 </html>

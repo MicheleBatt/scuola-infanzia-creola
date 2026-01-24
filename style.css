@@ -1,0 +1,839 @@
+/* ====================================
+   Scuola dell'Infanzia Santa Maria Goretti
+   Stile giovanile, allegro e gioioso
+   ==================================== */
+
+/* Import Google Fonts - Font arrotondati e friendly */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* Variabili CSS */
+:root {
+    --colore-primario: #FF6B6B;      /* Rosso corallo */
+    --colore-secondario: #4ECDC4;    /* Turchese */
+    --colore-accento: #FFE66D;       /* Giallo sole */
+    --colore-viola: #A06CD5;         /* Viola lavanda */
+    --colore-arancione: #FF9F43;     /* Arancione */
+    --colore-verde: #7ED957;         /* Verde prato */
+    --colore-rosa: #FF85A1;          /* Rosa */
+    --colore-azzurro: #74C0FC;       /* Azzurro cielo */
+
+    --sfondo-chiaro: #FFF9F0;        /* Beige chiaro */
+    --sfondo-card: #FFFFFF;
+    --testo-scuro: #2D3436;
+    --testo-chiaro: #636E72;
+
+    --ombra: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --ombra-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --bordo-radius: 20px;
+    --bordo-radius-piccolo: 12px;
+}
+
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--sfondo-chiaro);
+    color: var(--testo-scuro);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ====================================
+   HEADER E NAVIGAZIONE
+   ==================================== */
+header {
+    background: linear-gradient(135deg, var(--colore-primario), var(--colore-arancione));
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--ombra);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo-text h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.logo-text span {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Menu hamburger per mobile */
+.menu-toggle {
+    display: none;
+    background: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--bordo-radius-piccolo);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Navigazione */
+nav {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 10px 5%;
+    gap: 5px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: white;
+    color: var(--colore-primario);
+    transform: translateY(-2px);
+}
+
+/* ====================================
+   HERO SECTION
+   ==================================== */
+.hero {
+    background: linear-gradient(135deg, var(--colore-secondario), var(--colore-azzurro));
+    padding: 60px 5%;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: white;
+    color: var(--colore-primario);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: var(--ombra);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--ombra-hover);
+}
+
+.btn-primario {
+    background: var(--colore-primario);
+    color: white;
+}
+
+.btn-secondario {
+    background: var(--colore-secondario);
+    color: white;
+}
+
+/* ====================================
+   CONTENUTO PRINCIPALE
+   ==================================== */
+main {
+    padding: 50px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-title h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--colore-primario);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.page-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--colore-accento), var(--colore-arancione));
+    border-radius: 5px;
+}
+
+.page-title p {
+    color: var(--testo-chiaro);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+/* ====================================
+   CARDS E SEZIONI
+   ==================================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: var(--sfondo-card);
+    border-radius: var(--bordo-radius);
+    overflow: hidden;
+    box-shadow: var(--ombra);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--ombra-hover);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(135deg, var(--colore-azzurro), var(--colore-secondario));
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+    color: var(--colore-primario);
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: var(--testo-chiaro);
+    margin-bottom: 20px;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--colore-secondario);
+    font-weight: 600;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+}
+
+.card-link:hover {
+    gap: 12px;
+}
+
+/* Sezione con sfondo colorato */
+.section-colorata {
+    background: linear-gradient(135deg, var(--colore-viola), var(--colore-rosa));
+    padding: 60px 5%;
+    margin: 50px 0;
+    border-radius: var(--bordo-radius);
+    color: white;
+    text-align: center;
+}
+
+.section-colorata h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* ====================================
+   INFO BOX E LISTE
+   ==================================== */
+.info-box {
+    background: white;
+    border-radius: var(--bordo-radius);
+    padding: 30px;
+    box-shadow: var(--ombra);
+    margin-bottom: 30px;
+}
+
+.info-box h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--colore-primario);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--colore-accento);
+}
+
+.info-box ul {
+    list-style: none;
+}
+
+.info-box ul li {
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.info-box ul li:last-child {
+    border-bottom: none;
+}
+
+.info-box ul li::before {
+    content: '★';
+    color: var(--colore-accento);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Tabella per orari/tariffe */
+.tabella {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--bordo-radius);
+    overflow: hidden;
+    box-shadow: var(--ombra);
+}
+
+.tabella thead {
+    background: linear-gradient(135deg, var(--colore-primario), var(--colore-arancione));
+    color: white;
+}
+
+.tabella th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.tabella td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tabella tr:last-child td {
+    border-bottom: none;
+}
+
+.tabella tbody tr:hover {
+    background: var(--sfondo-chiaro);
+}
+
+/* ====================================
+   AVVISI
+   ==================================== */
+.avviso {
+    background: white;
+    border-radius: var(--bordo-radius);
+    padding: 25px;
+    box-shadow: var(--ombra);
+    margin-bottom: 20px;
+    border-left: 5px solid var(--colore-primario);
+    transition: transform 0.3s ease;
+}
+
+.avviso:hover {
+    transform: translateX(5px);
+}
+
+.avviso-data {
+    display: inline-block;
+    background: var(--colore-accento);
+    color: var(--testo-scuro);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.avviso h3 {
+    color: var(--colore-primario);
+    margin-bottom: 10px;
+}
+
+.avviso-importante {
+    border-left-color: var(--colore-primario);
+    background: linear-gradient(90deg, rgba(255, 107, 107, 0.1), white);
+}
+
+/* ====================================
+   GALLERY AMBIENTI
+   ==================================== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--bordo-radius);
+    overflow: hidden;
+    box-shadow: var(--ombra);
+    aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 30px 20px 20px;
+}
+
+.gallery-item-overlay h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* ====================================
+   FORM E MODULI
+   ==================================== */
+.modulo-download {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 20px 25px;
+    border-radius: var(--bordo-radius);
+    box-shadow: var(--ombra);
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.modulo-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.modulo-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--colore-primario), var(--colore-arancione));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.modulo-info h4 {
+    color: var(--testo-scuro);
+    margin-bottom: 5px;
+}
+
+.modulo-info p {
+    color: var(--testo-chiaro);
+    font-size: 0.9rem;
+}
+
+.btn-download {
+    background: var(--colore-verde);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: #6bc348;
+    transform: translateY(-2px);
+}
+
+/* ====================================
+   CALENDARIO
+   ==================================== */
+.calendario-mese {
+    background: white;
+    border-radius: var(--bordo-radius);
+    padding: 30px;
+    box-shadow: var(--ombra);
+    margin-bottom: 30px;
+}
+
+.calendario-mese h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--colore-viola);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.evento {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.evento:last-child {
+    border-bottom: none;
+}
+
+.evento-data {
+    background: linear-gradient(135deg, var(--colore-secondario), var(--colore-azzurro));
+    color: white;
+    padding: 10px 15px;
+    border-radius: var(--bordo-radius-piccolo);
+    text-align: center;
+    min-width: 60px;
+}
+
+.evento-data .giorno {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+}
+
+.evento-data .mese-abbr {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* ====================================
+   CONTATTI (nel footer o sezione)
+   ==================================== */
+.contatti-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.contatto-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: var(--bordo-radius);
+    box-shadow: var(--ombra);
+}
+
+.contatto-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--colore-accento);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+/* ====================================
+   FOOTER
+   ==================================== */
+footer {
+    background: linear-gradient(135deg, var(--testo-scuro), #1a1a2e);
+    color: white;
+    padding: 50px 5% 30px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+}
+
+.footer-section h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--colore-accento);
+}
+
+.footer-section p,
+.footer-section a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    line-height: 2;
+}
+
+.footer-section a:hover {
+    color: var(--colore-accento);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+}
+
+/* ====================================
+   RESPONSIVE DESIGN
+   ==================================== */
+@media (max-width: 768px) {
+    .header-top {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo-text h1 {
+        font-size: 1.1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 20px;
+    }
+
+    nav {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    nav.active {
+        max-height: 500px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .page-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modulo-download {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modulo-info {
+        flex-direction: column;
+    }
+
+    .tabella {
+        font-size: 0.9rem;
+    }
+
+    .tabella th,
+    .tabella td {
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 30px 4%;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .info-box {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* ====================================
+   ANIMAZIONI
+   ==================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Stagger animation for cards */
+.cards-grid .card:nth-child(1) { animation-delay: 0.1s; }
+.cards-grid .card:nth-child(2) { animation-delay: 0.2s; }
+.cards-grid .card:nth-child(3) { animation-delay: 0.3s; }
+.cards-grid .card:nth-child(4) { animation-delay: 0.4s; }
+.cards-grid .card:nth-child(5) { animation-delay: 0.5s; }
+.cards-grid .card:nth-child(6) { animation-delay: 0.6s; }
+
+/* ====================================
+   DECORAZIONI (pallini, forme)
+   ==================================== */
+.decorazione-pallini {
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Placeholder per immagini */
+.placeholder-img {
+    background: linear-gradient(135deg, var(--colore-azzurro), var(--colore-secondario));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-40 { margin-bottom: 40px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }

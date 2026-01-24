@@ -1,18 +1,197 @@
 <!DOCTYPE html>
-<html class="no-js no-svg" lang="it-IT">
-
+<html lang="it">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Scuola dell'infanzia Santa Maria Goretti Creola</title>
-	<meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avvisi e comunicazioni della Scuola dell'Infanzia Santa Maria Goretti: notizie, eventi e informazioni importanti">
+    <title>Avvisi - Scuola dell'Infanzia Santa Maria Goretti</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Scuola dell'infanzia Santa Maria Goretti Creola</h1>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="assets/images/logo_scuola.jpg" alt="Logo Scuola dell'Infanzia Santa Maria Goretti">
+                </div>
+                <div class="logo-text">
+                    <h1>Scuola dell'Infanzia Santa Maria Goretti</h1>
+                    <span>Creola di Saccolongo (PD)</span>
+                </div>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scuola.html">La Scuola</a></li>
+                <li><a href="proposta_educativa.html">Proposta Educativa</a></li>
+                <li><a href="ambienti.html">Ambienti</a></li>
+                <li><a href="mensa.html">Mensa</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="orari.html">Orari</a></li>
+                <li><a href="tariffe.html">Tariffe</a></li>
+                <li><a href="avvisi.html" class="active">Avvisi</a></li>
+                <li><a href="moduli.html">Moduli</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <a href="index.html">Homepage</a>
+    <!-- Contenuto principale -->
+    <main>
+        <section class="page-title">
+            <h2>Avvisi e Comunicazioni</h2>
+            <p>Tutte le notizie e gli aggiornamenti dalla nostra scuola</p>
+        </section>
+
+        <!-- Avvisi importanti -->
+        <section>
+            <div class="avviso avviso-importante">
+                <span class="avviso-data">20 Gennaio 2025</span>
+                <h3>Iscrizioni Anno Scolastico 2025/2026</h3>
+                <p>Sono aperte le iscrizioni per l'anno scolastico 2025/2026. I moduli sono disponibili nella sezione Modulistica del sito oppure presso la segreteria. La scadenza per la presentazione delle domande è fissata per il 28 febbraio 2025.</p>
+                <p class="mt-20">Per informazioni e per fissare un appuntamento per visitare la scuola, contattare la segreteria al numero 049 801 5128.</p>
+            </div>
+
+            <div class="avviso avviso-importante">
+                <span class="avviso-data">15 Gennaio 2025</span>
+                <h3>Riunione Genitori - Secondo Quadrimestre</h3>
+                <p>Si comunica che giovedi 23 gennaio 2025 alle ore 18:00 si terrà la riunione con i genitori per presentare le attività del secondo quadrimestre e discutere dell'andamento didattico.</p>
+                <p class="mt-20">La partecipazione è fortemente consigliata. I bambini non potranno essere presenti durante la riunione.</p>
+            </div>
+        </section>
+
+        <!-- Altri avvisi -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Ultimi Avvisi</h2>
+            </div>
+
+            <div class="avviso">
+                <span class="avviso-data">10 Gennaio 2025</span>
+                <h3>Festa di Carnevale</h3>
+                <p>Venerdi 28 febbraio 2025 festeggeremo il Carnevale a scuola! I bambini potranno venire mascherati. Vi chiediamo di evitare maschere troppo elaborate o che possano spaventare i compagni. Sono vietati accessori che possano essere pericolosi (spade, pistole giocattolo, ecc.).</p>
+            </div>
+
+            <div class="avviso">
+                <span class="avviso-data">8 Gennaio 2025</span>
+                <h3>Ripresa Attività dopo le Feste</h3>
+                <p>Si comunica che le attività didattiche riprenderanno regolarmente lunedi 7 gennaio 2025 con il consueto orario. Buon anno a tutte le famiglie!</p>
+            </div>
+
+            <div class="avviso">
+                <span class="avviso-data">15 Dicembre 2024</span>
+                <h3>Recita di Natale</h3>
+                <p>Venerdi 20 dicembre alle ore 10:30 si terrà la tradizionale recita di Natale. Tutti i genitori sono invitati a partecipare. Al termine della recita, i bambini usciranno con le famiglie per l'inizio delle vacanze natalizie.</p>
+            </div>
+
+            <div class="avviso">
+                <span class="avviso-data">1 Dicembre 2024</span>
+                <h3>Chiusura Vacanze di Natale</h3>
+                <p>Si ricorda che la scuola resterà chiusa per le vacanze natalizie dal 23 dicembre 2024 al 6 gennaio 2025 compresi. Le attività riprenderanno regolarmente martedi 7 gennaio 2025.</p>
+            </div>
+
+            <div class="avviso">
+                <span class="avviso-data">20 Novembre 2024</span>
+                <h3>Colloqui Individuali</h3>
+                <p>Si comunica che nella settimana dal 25 al 29 novembre si terranno i colloqui individuali con le insegnanti. Il calendario con gli appuntamenti sarà affisso in bacheca. Per eventuali variazioni, contattare le insegnanti di sezione.</p>
+            </div>
+
+            <div class="avviso">
+                <span class="avviso-data">10 Novembre 2024</span>
+                <h3>Festa dei Nonni</h3>
+                <p>Sabato 23 novembre alle ore 10:00 festeggeremo la Festa dei Nonni! I bambini hanno preparato una sorpresa speciale. Tutti i nonni sono invitati a partecipare. In caso di maltempo, la festa si svolgera nel salone della scuola.</p>
+            </div>
+
+            <div class="avviso">
+                <span class="avviso-data">15 Ottobre 2024</span>
+                <h3>Uscita Didattica - Fattoria</h3>
+                <p>Mercoledi 30 ottobre è prevista l'uscita didattica alla fattoria didattica "Il Girasole". I bambini dovranno indossare abbigliamento comodo e stivali di gomma. Portare un cambio completo nello zaino. L'autorizzazione deve essere consegnata entro il 25 ottobre.</p>
+            </div>
+
+            <div class="avviso">
+                <span class="avviso-data">9 Settembre 2024</span>
+                <h3>Inizio Anno Scolastico</h3>
+                <p>Benvenuti! L'anno scolastico 2024/2025 è ufficialmente iniziato. Auguriamo a tutti i bambini, alle famiglie e al personale un anno ricco di scoperte, gioia e crescita!</p>
+            </div>
+        </section>
+
+        <!-- Archivio -->
+        <section class="section-colorata mt-40">
+            <h3>Archivio Avvisi</h3>
+            <p>Gli avvisi precedenti sono disponibili presso la segreteria della scuola. Per comunicazioni urgenti, la scuola utilizza anche il gruppo WhatsApp dedicato ai genitori.</p>
+        </section>
+
+        <!-- Come restare aggiornati -->
+        <section class="mt-40">
+            <div class="page-title">
+                <h2>Come Restare Aggiornati</h2>
+            </div>
+
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #4ECDC4, #74C0FC);">&#128240;</div>
+                    <div class="card-content">
+                        <h3>Bacheca Scolastica</h3>
+                        <p>Tutti gli avvisi sono esposti nella bacheca all'ingresso della scuola. Controllate regolarmente!</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #7ED957, #4ECDC4);">&#128172;</div>
+                    <div class="card-content">
+                        <h3>Gruppo WhatsApp</h3>
+                        <p>Per le comunicazioni urgenti utilizziamo il gruppo WhatsApp dei genitori. Chiedete alle insegnanti per essere aggiunti.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img placeholder-img" style="background: linear-gradient(135deg, #A06CD5, #FF85A1);">&#128231;</div>
+                    <div class="card-content">
+                        <h3>Email</h3>
+                        <p>Le comunicazioni importanti vengono inviate anche via email. Assicuratevi di aver fornito un indirizzo valido.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Scuola dell'Infanzia Santa Maria Goretti</h4>
+                <p>Da anni al servizio delle famiglie di Creola e dintorni, offriamo un ambiente sereno e stimolante per la crescita dei vostri bambini.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Link Rapidi</h4>
+                <a href="scuola.html">La Scuola</a><br>
+                <a href="proposta_educativa.html">Proposta Educativa</a><br>
+                <a href="ambienti.html">Ambienti</a><br>
+                <a href="tariffe.html">Tariffe</a><br>
+                <a href="moduli.html">Modulistica</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Via Molini, 90<br>
+                35030 Creola di Saccolongo (PD)<br>
+                Tel: 049 801 5128<br>
+                Email: smgoretti@alice.it</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo (PD) - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('active');
+        }
+    </script>
 </body>
-
 </html>
