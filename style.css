@@ -159,28 +159,25 @@ nav ul li a.active {
    HERO SECTION
    ==================================== */
 .hero {
-    background: linear-gradient(135deg, var(--colore-secondario), var(--colore-azzurro));
-    padding: 60px 5%;
+    background-color: var(--colore-secondario); /* colore di riserva se l'immagine non carica */
+    background-image: url('assets/images/ambienti/aula_rossa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 5%;
     text-align: center;
     color: white;
     position: relative;
     overflow: hidden;
 }
 
+/* Velo scuro leggero sopra la foto: insieme all'alone attorno ai caratteri
+   garantisce la leggibilità senza spegnere l'immagine */
 .hero::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    animation: pulse 4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35));
 }
 
 .hero-content {
@@ -195,13 +192,17 @@ nav ul li a.active {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.85),
+                 0 2px 5px rgba(0, 0, 0, 0.9),
+                 0 0 30px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    opacity: 0.95;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9),
+                 0 1px 4px rgba(0, 0, 0, 0.9),
+                 0 0 24px rgba(0, 0, 0, 0.6);
 }
 
 .btn {
@@ -305,6 +306,16 @@ main {
     background: linear-gradient(135deg, var(--colore-azzurro), var(--colore-secondario));
 }
 
+/* Sposta il ritaglio verso il basso, per foto verticali il cui soggetto sta in fondo */
+.card-img-basso {
+    object-position: center 85%;
+}
+
+/* Sposta il ritaglio verso l'alto, per foto verticali il cui soggetto sta in cima */
+.card-img-alto {
+    object-position: center top;
+}
+
 .card-content {
     padding: 25px;
 }
@@ -352,6 +363,46 @@ main {
 }
 
 /* ====================================
+   CITAZIONE
+   ==================================== */
+.citazione {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 45px 40px 30px;
+    background: white;
+    border-left: 6px solid var(--colore-secondario);
+    border-radius: var(--bordo-radius);
+    box-shadow: var(--ombra);
+}
+
+.citazione::before {
+    content: '\201C';
+    position: absolute;
+    top: 10px;
+    left: 28px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--colore-accento);
+}
+
+.citazione blockquote p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--testo-scuro);
+}
+
+.citazione figcaption {
+    margin-top: 15px;
+    text-align: right;
+    font-weight: 700;
+    color: var(--colore-primario);
+}
+
+/* ====================================
    INFO BOX E LISTE
    ==================================== */
 .info-box {
@@ -375,12 +426,12 @@ main {
     list-style: none;
 }
 
+/* Il testo scorre come un normale paragrafo, con la stellina a sbalzo:
+   così grassetti e link restano nel flusso della frase */
 .info-box ul li {
-    padding: 12px 0;
+    position: relative;
+    padding: 12px 0 12px 26px;
     border-bottom: 1px dashed #eee;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
 }
 
 .info-box ul li:last-child {
@@ -389,9 +440,35 @@ main {
 
 .info-box ul li::before {
     content: '★';
+    position: absolute;
+    left: 0;
+    top: 12px;
     color: var(--colore-accento);
     font-size: 1rem;
-    flex-shrink: 0;
+}
+
+/* Link testuali dentro i box, coordinati con la palette del sito.
+   I pulsanti .btn sono esclusi: hanno già un loro stile. */
+.info-box a:not(.btn) {
+    color: var(--colore-primario);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s ease;
+}
+
+.info-box a:not(.btn):hover {
+    color: var(--colore-arancione);
+}
+
+/* Contenitore scorrevole per tabelle larghe su schermi piccoli */
+.tabella-scroll {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.tabella-scroll .tabella {
+    margin-bottom: 0;
 }
 
 /* Tabella per orari/tariffe */
@@ -418,6 +495,22 @@ main {
 .tabella td {
     padding: 15px;
     border-bottom: 1px solid #f0f0f0;
+}
+
+.tabella td ul {
+    list-style: none;
+    margin: 0;
+}
+
+.tabella td ul li {
+    padding: 3px 0;
+}
+
+.tabella td ul li::before {
+    content: '\2022';
+    color: var(--colore-secondario);
+    font-weight: 700;
+    margin-right: 8px;
 }
 
 .tabella tr:last-child td {
@@ -459,6 +552,27 @@ main {
 .avviso h3 {
     color: var(--colore-primario);
     margin-bottom: 10px;
+}
+
+.avviso-locandina {
+    display: block;
+    max-width: 420px;
+    margin-top: 20px;
+    border-radius: var(--bordo-radius-piccolo);
+    overflow: hidden;
+    box-shadow: var(--ombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avviso-locandina:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--ombra-hover);
+}
+
+.avviso-locandina img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .avviso-importante {
@@ -507,6 +621,147 @@ main {
 .gallery-item-overlay h3 {
     font-size: 1.2rem;
     margin-bottom: 5px;
+}
+
+/* Riquadri della galleria apribili a tutto schermo */
+.gallery-item-cliccabile {
+    cursor: pointer;
+}
+
+.gallery-item-cliccabile:focus-visible {
+    outline: 3px solid var(--colore-primario);
+    outline-offset: 4px;
+}
+
+/* ====================================
+   ANTEPRIMA A TUTTO SCHERMO (LIGHTBOX)
+   ==================================== */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.lightbox.aperta {
+    display: flex;
+}
+
+.lightbox-contenuto {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.lightbox-contenuto img {
+    display: block;
+    margin: 0 auto;
+    max-width: 97vw;
+    max-height: 94vh;
+    width: auto;
+    height: auto;
+    border-radius: var(--bordo-radius-piccolo);
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.6);
+}
+
+/* Didascalia sovrapposta in fondo alla foto, così non le ruba spazio */
+.lightbox-contenuto figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 50px 20px 18px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    border-radius: 0 0 var(--bordo-radius-piccolo) var(--bordo-radius-piccolo);
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* Sta sopra la foto, in alto a destra */
+.lightbox-chiudi {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.lightbox-chiudi:hover,
+.lightbox-chiudi:focus-visible {
+    background: var(--colore-primario);
+    transform: scale(1.08);
+    outline: none;
+}
+
+/* Frecce laterali per scorrere le foto con il mouse o con il dito */
+.lightbox-freccia {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 54px;
+    height: 54px;
+    padding: 0 0 6px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    font-size: 2.6rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.lightbox-precedente {
+    left: 20px;
+}
+
+.lightbox-successiva {
+    right: 20px;
+}
+
+.lightbox-freccia:hover,
+.lightbox-freccia:focus-visible {
+    background: var(--colore-primario);
+    outline: none;
+}
+
+.lightbox-precedente:hover,
+.lightbox-precedente:focus-visible {
+    transform: translateY(-50%) scale(1.08);
+}
+
+.lightbox-successiva:hover,
+.lightbox-successiva:focus-visible {
+    transform: translateY(-50%) scale(1.08);
+}
+
+.lightbox-freccia[hidden] {
+    display: none;
+}
+
+/* Blocca lo scorrimento della pagina mentre l'anteprima è aperta */
+body.senza-scroll {
+    overflow: hidden;
 }
 
 /* ====================================
@@ -638,6 +893,55 @@ main {
     box-shadow: var(--ombra);
 }
 
+/* Tile con la foto in cima, sopra il contenuto */
+.contatto-item-con-foto {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    overflow: hidden;
+}
+
+.contatto-foto {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.contatto-riga {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+}
+
+.contatto-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+}
+
+.contatto-icon-facebook {
+    background: #1877F2;
+    color: white;
+}
+
+.contatto-icon-instagram {
+    background: linear-gradient(45deg, #FEDA75, #FA7E1E 25%, #D62976 50%, #962FBF 75%, #4F5BD5);
+    color: white;
+}
+
+.contatto-item p a {
+    color: var(--colore-primario);
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.contatto-item p a:hover {
+    text-decoration: underline;
+}
+
 .contatto-icon {
     width: 50px;
     height: 50px;
@@ -684,6 +988,43 @@ footer {
 
 .footer-section a:hover {
     color: var(--colore-accento);
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+.footer-social a.social-facebook:hover {
+    background: #1877F2;
+}
+
+.footer-social a.social-instagram:hover {
+    background: linear-gradient(45deg, #FEDA75, #FA7E1E 25%, #D62976 50%, #962FBF 75%, #4F5BD5);
+}
+
+.footer-social svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 
 .footer-bottom {
@@ -804,6 +1145,53 @@ footer {
 
     .info-box {
         padding: 20px;
+    }
+
+    .citazione {
+        padding: 40px 25px 25px;
+    }
+
+    .lightbox {
+        padding: 8px;
+    }
+
+    .lightbox-contenuto img {
+        max-width: 98vw;
+        max-height: 96vh;
+    }
+
+    .lightbox-contenuto figcaption {
+        font-size: 1.1rem;
+        padding: 40px 15px 14px;
+    }
+
+    .lightbox-chiudi {
+        top: 12px;
+        right: 12px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .contatto-foto {
+        height: 220px;
+    }
+
+    .lightbox-freccia {
+        width: 44px;
+        height: 44px;
+        font-size: 2.1rem;
+    }
+
+    .lightbox-precedente {
+        left: 8px;
+    }
+
+    .lightbox-successiva {
+        right: 8px;
+    }
+
+    .citazione blockquote p {
+        font-size: 1.05rem;
     }
 
     .btn {
