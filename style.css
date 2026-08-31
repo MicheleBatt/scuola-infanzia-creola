@@ -1107,6 +1107,12 @@ footer {
    RESPONSIVE DESIGN
    ==================================== */
 @media (max-width: 768px) {
+    /* Su schermi piccoli l'intestazione scorre con la pagina:
+       da fissa occuperebbe una fetta eccessiva dello schermo */
+    header {
+        position: static;
+    }
+
     .header-top {
         justify-content: space-between;
         align-items: center;
@@ -1189,10 +1195,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    /* Su mobile il menu è chiuso, quindi l'intestazione è più bassa */
+    /* Qui l'intestazione scorre via, quindi alle ancore basta un piccolo respiro */
     .info-box[id],
     section[id] {
-        scroll-margin-top: 100px;
+        scroll-margin-top: 20px;
     }
 
     .modulo-download {
