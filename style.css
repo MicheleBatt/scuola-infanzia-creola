@@ -99,7 +99,8 @@ header {
     border-radius: 50%;
 }
 
-.logo-text h1 {
+.logo-text .logo-nome {
+    display: block;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
@@ -187,6 +188,7 @@ nav ul li a.active {
     margin: 0 auto;
 }
 
+.hero h1,
 .hero h2 {
     font-family: 'Quicksand', sans-serif;
     font-size: 2.5rem;
@@ -247,6 +249,7 @@ main {
     margin-bottom: 50px;
 }
 
+.page-title h1,
 .page-title h2 {
     font-family: 'Quicksand', sans-serif;
     font-size: 2.5rem;
@@ -257,6 +260,7 @@ main {
     display: inline-block;
 }
 
+.page-title h1::after,
 .page-title h2::after {
     content: '';
     position: absolute;
@@ -362,6 +366,17 @@ main {
     margin-bottom: 20px;
 }
 
+/* Numero dell'errore nella pagina 404 */
+.errore-404 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 /* ====================================
    CITAZIONE
    ==================================== */
@@ -422,6 +437,13 @@ main {
     border-bottom: 3px solid var(--colore-accento);
 }
 
+/* L'intestazione è fissa in cima: senza questo margine, saltando a un'ancora
+   la sezione di destinazione finirebbe nascosta sotto al menu */
+.info-box[id],
+section[id] {
+    scroll-margin-top: 150px;
+}
+
 .info-box ul {
     list-style: none;
 }
@@ -447,9 +469,11 @@ main {
     font-size: 1rem;
 }
 
-/* Link testuali dentro i box, coordinati con la palette del sito.
+/* Link testuali dentro i contenuti, coordinati con la palette del sito.
    I pulsanti .btn sono esclusi: hanno già un loro stile. */
-.info-box a:not(.btn) {
+.info-box a:not(.btn),
+.tabella a:not(.btn),
+.avviso a:not(.btn) {
     color: var(--colore-primario);
     font-weight: 600;
     text-decoration: underline;
@@ -457,8 +481,52 @@ main {
     transition: color 0.3s ease;
 }
 
-.info-box a:not(.btn):hover {
+.info-box a:not(.btn):hover,
+.tabella a:not(.btn):hover,
+.avviso a:not(.btn):hover {
     color: var(--colore-arancione);
+}
+
+/* ====================================
+   MAPPA INCORPORATA
+   ==================================== */
+.mappa {
+    position: relative;
+    border-radius: var(--bordo-radius-piccolo);
+    overflow: hidden;
+    background: var(--sfondo-chiaro);
+    min-height: 350px;
+}
+
+/* Messaggio visibile solo se il browser blocca o rimuove l'iframe */
+.mappa-fallback {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+    color: var(--testo-chiaro);
+}
+
+.mappa iframe {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+@media (max-width: 480px) {
+    .mappa,
+    .mappa iframe {
+        min-height: 280px;
+        height: 280px;
+    }
 }
 
 /* Contenitore scorrevole per tabelle larghe su schermi piccoli */
@@ -1099,6 +1167,7 @@ footer {
         text-align: center;
     }
 
+    .hero h1,
     .hero h2 {
         font-size: 1.8rem;
     }
@@ -1107,12 +1176,23 @@ footer {
         font-size: 1rem;
     }
 
+    .page-title h1,
     .page-title h2 {
         font-size: 1.8rem;
     }
 
+    .errore-404 {
+        font-size: 4rem;
+    }
+
     .cards-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Su mobile il menu è chiuso, quindi l'intestazione è più bassa */
+    .info-box[id],
+    section[id] {
+        scroll-margin-top: 100px;
     }
 
     .modulo-download {
