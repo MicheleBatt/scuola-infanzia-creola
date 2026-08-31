@@ -1,0 +1,13 @@
+# Originali fotografici: scatti .HEIC dal telefono e copie pre-ottimizzazione.
+# Non vanno pubblicati sul sito né versionati: ~206 MB contro i 5 MB del sito.
+assets/originali/
+
+# File di sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# File temporanei degli editor
+*~
+*.swp
+*.swo

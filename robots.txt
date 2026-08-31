@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.scuolainfanziacreola.it/sitemap.xml
+Sitemap: https://michelebatt.github.io/scuola-infanzia-creola/sitemap.xml
