@@ -73,8 +73,8 @@
 
             <!-- Mappa Google Maps -->
             <div class="info-box mt-30 text-center">
-                <div class="mappa">
-                    <p class="mappa-fallback">Non riesci a vedere la mappa? Il tuo browser potrebbe bloccare i contenuti di Google. <a href="https://maps.app.goo.gl/u2gAtcC86W323Mz97" target="_blank" rel="noopener">Apri la mappa in Google Maps</a></p>
+                <div class="mappa" data-mappa-riserva="https://www.openstreetmap.org/export/embed.html?bbox=11.7313%2C45.4095%2C11.7453%2C45.4155&amp;layer=mapnik&amp;marker=45.412499%2C11.738311">
+                    <p class="mappa-fallback">Non riesci a vedere la mappa? <a href="https://maps.app.goo.gl/u2gAtcC86W323Mz97" target="_blank" rel="noopener">Aprila in Google Maps</a></p>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.8432875467474!2d11.738311376825473!3d45.41249963688596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477f2703031e504f%3A0x4450a275054c17ba!2sScuola%20materna%20Santa%20Maria%20Goretti-Creola!5e0!3m2!1sit!2sit!4v1769269169276!5m2!1sit!2sit" allowfullscreen="" allow="fullscreen" referrerpolicy="no-referrer-when-downgrade" title="Mappa della Scuola dell'Infanzia Santa Maria Goretti a Creola di Saccolongo"></iframe>
                 </div>
                 <p class="mt-20">La scuola si trova nel centro della frazione di Creola, facilmente raggiungibile e con ampia possibilità di parcheggio nelle vicinanze.</p>
@@ -203,6 +203,41 @@
         function toggleMenu() {
             document.getElementById('main-nav').classList.toggle('active');
         }
+
+        // La mappa di Google viene rimossa o bloccata da diversi browser mobili
+        // (protezioni anti-tracciamento, ad-blocker). In quel caso subentra
+        // automaticamente la stessa mappa servita da OpenStreetMap.
+        (function () {
+            var contenitore = document.querySelector('.mappa[data-mappa-riserva]');
+            if (!contenitore) return;
+
+            var iframe = contenitore.querySelector('iframe');
+            if (!iframe) { mostraRiserva(); return; }
+
+            var caricata = false;
+            var sostituita = false;
+
+            iframe.addEventListener('load', function () { caricata = true; });
+            iframe.addEventListener('error', mostraRiserva);
+
+            // Dopo qualche secondo verifica se la mappa è davvero comparsa
+            setTimeout(function () {
+                var rimossa = !document.body.contains(iframe);
+                var invisibile = !rimossa && iframe.offsetHeight === 0;
+                if (rimossa || invisibile || !caricata) mostraRiserva();
+            }, 4000);
+
+            function mostraRiserva() {
+                if (sostituita) return;
+                sostituita = true;
+                var titolo = iframe ? iframe.getAttribute('title') : 'Mappa della scuola';
+                if (iframe && iframe.parentNode) iframe.parentNode.removeChild(iframe);
+                var riserva = document.createElement('iframe');
+                riserva.src = contenitore.getAttribute('data-mappa-riserva');
+                riserva.title = titolo;
+                contenitore.appendChild(riserva);
+            }
+        })();
     </script>
 </body>
 </html>
