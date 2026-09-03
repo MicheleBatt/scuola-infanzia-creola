@@ -247,8 +247,8 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo (PD) - Tutti i diritti riservati</p>
-            <p class="footer-dati-fiscali">P. IVA 03390690281 &middot; C.F. 92032160282</p>
+            <p>&copy; <span id="anno-corrente">2026</span> Scuola dell'Infanzia Santa Maria Goretti - Creola di Saccolongo (PD) - Tutti i diritti riservati</p>
+            <p class="footer-dati-fiscali">Parrocchia San Pietro Apostolo &middot; P. IVA 03390690281 &middot; C.F. 92032160282</p>
         </div>
     </footer>
 
@@ -256,6 +256,13 @@
         function toggleMenu() {
             document.getElementById('main-nav').classList.toggle('active');
         }
+
+        // Anno del copyright sempre aggiornato; il valore scritto nell'HTML
+        // resta come riserva se JavaScript non è disponibile.
+        (function () {
+            var anno = document.getElementById('anno-corrente');
+            if (anno) anno.textContent = new Date().getFullYear();
+        })();
 
         // La mappa di Google viene rimossa o bloccata da diversi browser mobili
         // (protezioni anti-tracciamento, ad-blocker). In quel caso subentra
