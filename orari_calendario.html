@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
     <!-- Header -->
@@ -45,6 +45,7 @@
                 <li><a href="ambienti.html">Ambienti</a></li>
                 <li><a href="orari_calendario.html" class="active">Orari e Calendario</a></li>
                 <li><a href="mensa.html">Mensa</a></li>
+                <li><a href="tariffe.html">Tariffe</a></li>
                 <li><a href="moduli.html">Moduli</a></li>
                 <li><a href="avvisi.html">Avvisi</a></li>
                 <li><a href="sede_e_contatti.html">Sede e Contatti</a></li>
@@ -74,7 +75,7 @@
                 <ul class="mt-20">
                     <li><strong>Anticipo</strong> (servizio a richiesta con supplemento): dalle 7.30 alle 8.00</li>
                     <li><strong>Entrata</strong> dalle 8.00 alle 9.00</li>
-                    <li><strong>Prima uscita</strong> dalle 13.00 alle 13.30</li>
+                    <li><strong>Prima uscita</strong> dalle 12.40 alle 13.00</li>
                     <li><strong>Seconda uscita</strong> dalle 15.45 alle 16.00</li>
                 </ul>
             </div>
@@ -91,65 +92,84 @@
                 <p class="mt-20">Di seguito la scansione di una giornata tipo:</p>
             </div>
 
+            <div class="tabella-scroll">
             <table class="tabella">
                 <thead>
                     <tr>
-                        <th>Tempi</th>
-                        <th>Proposte</th>
+                        <th>Orario</th>
+                        <th>Attività</th>
+                        <th>Spazi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Dalle ore 8.00 alle ore 9.00</td>
-                        <td>Entrata, accoglienza e gioco libero</td>
+                        <td>
+                            7.30 &ndash; 8.00<br>
+                            <em>ingresso anticipato solo per chi richiede il servizio</em><br>
+                            <strong>8.00 &ndash; 9.00</strong>
+                        </td>
+                        <td>Entrata: momento di accoglienza con attività di gioco libero (individuale o di gruppo), riordino e momento del buongiorno con preghiera e canti.</td>
+                        <td>Salone</td>
                     </tr>
                     <tr>
-                        <td>Dalle ore 9.00 alle ore 10.00</td>
+                        <td>9.00 &ndash; 10.00</td>
                         <td>
                             <ul>
-                                <li>Riordino saloni</li>
-                                <li>Prima routine di cura e igiene personale</li>
-                                <li>Merenda</li>
-                                <li>Preghiera</li>
+                                <li>Igiene personale</li>
+                                <li>Merenda (frutta di stagione, yogurt&hellip;)</li>
+                                <li>Attività di routine come: circle time, calendario, presenze, meteo, incarichi, canti&hellip;</li>
                             </ul>
                         </td>
+                        <td>Servizi igienici / Stanza mensa / Sezione</td>
                     </tr>
                     <tr>
-                        <td>Dalle ore 10.00 alle ore 11.30</td>
-                        <td>Attività educative e didattiche secondo la progettazione</td>
+                        <td>10.00 &ndash; 11.30</td>
+                        <td>
+                            <ul>
+                                <li>Attività del progetto educativo-didattico / laboratori suddivisi per gruppi omogenei</li>
+                                <li>Gioco libero</li>
+                            </ul>
+                        </td>
+                        <td>Sezione / Salone / Giardino</td>
                     </tr>
                     <tr>
-                        <td>Dalle ore 11.30 alle ore 12.00</td>
-                        <td>Seconda routine di cura e igiene personale</td>
+                        <td>11.30 &ndash; 11.45</td>
+                        <td>Igiene personale e preparazione al pranzo con gli incarichi prestabiliti.</td>
+                        <td>Servizi igienici / Stanza mensa</td>
                     </tr>
                     <tr>
-                        <td>Dalle ore 12.00 alle ore 13.00</td>
+                        <td>11.45 &ndash; 12.30</td>
                         <td><a href="mensa.html">Pranzo</a></td>
+                        <td>Stanza mensa</td>
                     </tr>
                     <tr>
-                        <td>Dalle ore 13.00 alle ore 13.30</td>
-                        <td>Gioco libero e prima uscita</td>
+                        <td><strong>12.40 &ndash; 13.00</strong></td>
+                        <td>Prima uscita</td>
+                        <td>Sezione / Salone / Giardino</td>
                     </tr>
                     <tr>
-                        <td>Dalle ore 13.30 alle ore 15.15</td>
+                        <td>13.00 &ndash; 15.30</td>
                         <td>
                             <ul>
-                                <li>Terza routine di cura e igiene personale</li>
-                                <li>Attività per i grandi in sezione</li>
-                                <li>Riposo per i piccoli e i medi</li>
+                                <li>Igiene personale e riposo per i bambini piccoli e medi</li>
+                                <li>Gioco libero e attività per i bambini medi e grandi</li>
                             </ul>
                         </td>
+                        <td>Stanza nanna</td>
                     </tr>
                     <tr>
-                        <td>Dalle ore 15.15 alle ore 15.45</td>
+                        <td>15.30 &ndash; 15.40</td>
                         <td>Merenda</td>
+                        <td>Stanza mensa</td>
                     </tr>
                     <tr>
-                        <td>Dalle ore 15.45 alle ore 16.00</td>
+                        <td><strong>15.45 &ndash; 16.00</strong></td>
                         <td>Seconda uscita</td>
+                        <td>Sezione / Salone / Giardino</td>
                     </tr>
                 </tbody>
             </table>
+            </div>
         </section>
 
         <!-- C. Opzioni di frequenza -->
@@ -164,8 +184,8 @@
                     <div class="card-img placeholder-img">&#9728;&#65039;</div>
                     <div class="card-content">
                         <h3>Solo mattino</h3>
-                        <p>Frequenza dalle 8:00 alle 13:00/13:30, con il pranzo a scuola. Ideale per chi preferisce il pomeriggio a casa.</p>
-                        <p class="mt-20"><strong>Orario:</strong> 8:00 &ndash; 13:00/13:30</p>
+                        <p>Frequenza dalle 8.00 alle 12.40/13.00, con il pranzo a scuola. Ideale per chi preferisce il pomeriggio a casa.</p>
+                        <p class="mt-20"><strong>Orario:</strong> 8.00 &ndash; 12.40/13.00</p>
                     </div>
                 </article>
 
@@ -174,7 +194,7 @@
                     <div class="card-content">
                         <h3>Tempo normale</h3>
                         <p>Frequenza completa con pranzo e riposo o attività pomeridiane. L'opzione più scelta dalle famiglie.</p>
-                        <p class="mt-20"><strong>Orario:</strong> 8:00 &ndash; 15:45/16:00</p>
+                        <p class="mt-20"><strong>Orario:</strong> 8.00 &ndash; 15.45/16.00</p>
                     </div>
                 </article>
 
@@ -204,6 +224,7 @@
                 <a href="ambienti.html">Ambienti</a><br>
                 <a href="orari_calendario.html">Orari e Calendario</a><br>
                 <a href="mensa.html">Mensa</a><br>
+                <a href="tariffe.html">Tariffe</a><br>
                 <a href="moduli.html">Modulistica</a><br>
                 <a href="avvisi.html">Avvisi</a><br>
                 <a href="sede_e_contatti.html">Sede e Contatti</a>

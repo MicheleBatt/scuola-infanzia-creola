@@ -541,13 +541,20 @@ section[id] {
 }
 
 /* Contenitore scorrevole per tabelle larghe su schermi piccoli */
+/* Con overflow-x questo diventa un contenitore di scorrimento, che ritaglia
+   sui propri bordi dritti tutto ciò che sporge: l'ombra della tabella veniva
+   tranciata ad angolo retto in basso. Ombra e arrotondamento stanno quindi qui,
+   sul contenitore, che non è ritagliato da nessuno. */
 .tabella-scroll {
     overflow-x: auto;
     margin-bottom: 30px;
+    border-radius: var(--bordo-radius);
+    box-shadow: var(--ombra);
 }
 
 .tabella-scroll .tabella {
     margin-bottom: 0;
+    box-shadow: none;
 }
 
 /* Tabella per orari/tariffe */
