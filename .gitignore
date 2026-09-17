@@ -11,3 +11,7 @@ desktop.ini
 *~
 *.swp
 *.swo
+
+# Documenti di lavoro della scuola (testi con annotazioni redazionali): servono in locale
+# come fonte dei contenuti, ma non vanno pubblicati sul sito.
+assets/documents/
